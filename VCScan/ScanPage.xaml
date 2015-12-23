@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="VCScan.ScanPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VCScan"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Image Name="myimg"></Image>
+            <TextBlock Name="txtEmail" FontSize="26" TextWrapping="Wrap">
+            <Span>Почта: </Span>
+            </TextBlock>
+            <TextBlock Name="txtPhone" FontSize="26" TextWrapping="Wrap">
+            <Span>Телефон: </Span>
+            </TextBlock>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <TextBlock Name="OcrText" FontSize="30" TextWrapping="Wrap" />
+        </ScrollViewer>
+    </Grid>
+</Page>

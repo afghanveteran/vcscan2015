@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="VCScan.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VCScan"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <CaptureElement x:Name="photoPreview" Stretch="UniformToFill" VerticalAlignment="Stretch"  HorizontalAlignment="Center" Tapped="photoPreview_Tapped"  />
+        <Image Name="imagePicture" Stretch="Uniform" Margin="0,20,20,0" Canvas.ZIndex="2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100"></Image>
+        <Path Fill="Azure" Margin="20,20,0,0" Data="M 10 0 L 10 20 0 10 0 15 12.5 27.5 25 15 25 10 15 20 15 0 z" Stroke="Black"/>
+
+
+        <Image Name="myImage" Visibility="Collapsed" Stretch="Uniform" Margin="10,0,0,10" Height="200" Width="200" HorizontalAlignment="Left" Canvas.ZIndex="3" VerticalAlignment="Bottom"></Image>
+    </Grid>
+
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Name="btnPhoto" Label="Photo" Icon="Camera" Click="btnPhoto_Click"/>
+            <AppBarButton Name="btnScan" Visibility="Collapsed" Label="Scan" Icon="Scan" Click="btnScan_Click"/>
+            <AppBarButton Name="btnDelete" Visibility="Collapsed" Label="Delete" Icon="Delete" Click="btnDelete_Click"></AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
